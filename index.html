@@ -1,16 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Chinese</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .audio-container {
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+
+    <header>
+        <h1>Learn Chinese - Basics</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h3>Pinyin Pronunciation</h3>
+            <p><b>nǐ hǎo (你好)</b> - "Hello"</p>
+            <div class="audio-container">
+                <audio id="helloAudio" src="audio/hello.mp3"></audio>
+                <button onclick="playAudio('helloAudio')">Play Pronunciation</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Basic Vocabulary</h3>
+            <p><b>xiè xie (谢谢)</b> - "Thank you"</p>
+            <div class="audio-container">
+                <audio id="thankYouAudio" src="audio/thankyou.mp3"></audio>
+                <button onclick="playAudio('thankYouAudio')">Play Pronunciation</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Common Phrases</h3>
+            <p><b>zài jiàn (再见)</b> - "Goodbye"</p>
+            <div class="audio-container">
+                <audio id="goodbyeAudio" src="audio/goodbye.mp3"></audio>
+                <button onclick="playAudio('goodbyeAudio')">Play Pronunciation</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            audio.play();
+        }
+    </script>
+
 </body>
 
 </html>
